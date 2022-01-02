@@ -1,0 +1,13 @@
+::ng-deep { 
+    .mat-step-label {
+        display: none !important;
+    }
+
+    .mat-horizontal-stepper-header .mat-step-icon {
+        margin-right: 0 !important;
+    }
+}
+
+.btn-next-step {
+    float: right;
+}

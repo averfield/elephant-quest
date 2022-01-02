@@ -1,0 +1,30 @@
+<mat-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious>Попереднє завдання</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <div>
+            <button mat-stroked-button matStepperPrevious>Попереднє завдання</button>
+        </div>
+    </mat-step>
+</mat-stepper>
