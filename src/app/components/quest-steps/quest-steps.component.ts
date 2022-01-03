@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AnswerValidatorService } from 'src/app/services/answer-validator-service';
 
 @Component({
   selector: 'quest-steps',
@@ -15,11 +16,14 @@ export class QuestStepsComponent implements OnInit {
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
+      firstCtrl: ['', [Validators.required, AnswerValidatorService.answerValidator(["2"])]],
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
+      secondCtrl: ['', [Validators.required, AnswerValidatorService.answerValidator(["жовтий"])]],
     });
   }
 
+  answerValidator(userAnswer: string, correctAnswers: string[]): boolean {
+    return correctAnswers.includes(userAnswer);
+  }
 }

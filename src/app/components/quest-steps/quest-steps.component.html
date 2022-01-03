@@ -1,6 +1,7 @@
 <mat-stepper [linear]="true" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
+            <p>1 + 1</p>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="firstCtrl" required>
@@ -12,19 +13,21 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
+            <p>Якого кольору банан?</p>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="secondCtrl" required>
             </mat-form-field>
             <div>
-                <button mat-stroked-button matStepperPrevious>Попереднє завдання</button>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
             </div>
         </form>
     </mat-step>
     <mat-step>
+        <p>А ти харош..</p>
         <div>
-            <button mat-stroked-button matStepperPrevious>Попереднє завдання</button>
+            <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
         </div>
     </mat-step>
 </mat-stepper>
