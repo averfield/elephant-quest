@@ -10,14 +10,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { QuestStepsComponent } from './components/quest-steps/quest-steps.component';
 import { MatButtonModule } from '@angular/material/button';
+import { QuestComponent } from './components/quest/quest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestStepsComponent,
+    QuestComponent,
   ],
   exports: [
     QuestStepsComponent,
+    QuestComponent,
   ],
   imports: [
     BrowserModule,

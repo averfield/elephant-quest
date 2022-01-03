@@ -6,6 +6,22 @@
     .mat-horizontal-stepper-header .mat-step-icon {
         margin-right: 0 !important;
     }
+
+    .mat-stepper-horizontal-line {
+        min-width: 0px !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .mat-step-icon {
+            height: 20px !important;
+            width: 20px !important;
+            font-size: 10px;
+        }
+
+        .mat-horizontal-stepper-header {
+            padding: 0 18px !important;
+        }
+    }
 }
 
 .btn-next-step {
@@ -14,4 +30,10 @@
 
 .btn-previous-step {
     float: left;
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        font-size: 12px;
+    }
 }

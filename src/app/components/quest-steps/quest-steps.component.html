@@ -1,7 +1,7 @@
 <mat-stepper [linear]="true" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-            <p>1 + 1</p>
+            <p> {{ firstQuestionText }} </p>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="firstCtrl" required>
@@ -13,7 +13,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
-            <p>Якого кольору банан?</p>
+            <p> {{ secondQuestionText }} </p>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="secondCtrl" required>
@@ -24,8 +24,69 @@
             </div>
         </form>
     </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+            <p> {{ thirdQuestionText }} </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="thirdCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step><mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+            <p> {{ fourthQuestionText }} </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="fourthCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step><mat-step [stepControl]="fifthFormGroup">
+        <form [formGroup]="fifthFormGroup">
+            <p> {{ fifthQuestionText }} </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="fifthCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step><mat-step [stepControl]="sixthFormGroup">
+        <form [formGroup]="sixthFormGroup">
+            <p> {{ sixthQuestionText }} </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="sixthCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step><mat-step [stepControl]="seventhFormGroup">
+        <form [formGroup]="seventhFormGroup">
+            <p> {{ seventhQuestionText }} </p>
+            <mat-form-field appearance="fill">
+                <mat-label>Відповідь</mat-label>
+                <input matInput formControlName="seventhCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
+                <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
+            </div>
+        </form>
+    </mat-step>
     <mat-step>
-        <p>А ти харош..</p>
+        <p> {{ finalText }} </p>
         <div>
             <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
         </div>
