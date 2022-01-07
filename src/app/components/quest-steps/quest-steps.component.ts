@@ -24,7 +24,10 @@ export class QuestStepsComponent {
   fifthQuestionText: string = "";
   sixthQuestionText: string = "";
   seventhQuestionText: string = "";
+  eightsQuestionText: string = "";
   finalText: string = "А ти харош...";
+
+  finalBtnClicked = false;
 
   constructor(private _formBuilder: FormBuilder) {
     this.initQuestion();
