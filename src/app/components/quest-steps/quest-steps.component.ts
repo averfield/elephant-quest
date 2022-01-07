@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AnswerValidatorService } from 'src/app/services/answer-validator-service';
 
@@ -7,7 +7,7 @@ import { AnswerValidatorService } from 'src/app/services/answer-validator-servic
   templateUrl: './quest-steps.component.html',
   styleUrls: ['./quest-steps.component.scss']
 })
-export class QuestStepsComponent implements OnInit {
+export class QuestStepsComponent {
 
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
@@ -29,8 +29,6 @@ export class QuestStepsComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) {
     this.initQuestion();
   }
-
-  ngOnInit() { }
 
   private initQuestion(): void {
     this.firstFormGroup = this._formBuilder.group({
@@ -54,9 +52,5 @@ export class QuestStepsComponent implements OnInit {
     this.seventhFormGroup = this._formBuilder.group({
       seventhCtrl: ['', [Validators.required, AnswerValidatorService.answerValidator(["жовтий"])]],
     });
-  }
-
-  answerValidator(userAnswer: string, correctAnswers: string[]): boolean {
-    return correctAnswers.includes(userAnswer);
   }
 }

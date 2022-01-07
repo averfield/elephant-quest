@@ -5,8 +5,12 @@ import { FormControl, ValidationErrors } from "@angular/forms";
 export class AnswerValidatorService {
     static answerValidator(correctAnswers: string[]): ValidationErrors | null {
         return (control: FormControl) => {
-            const userInput = control.value;
-            return !correctAnswers.includes(userInput) ? {answerIncorrect: {value: userInput}} : null;
+            const userInput = this.processString(control.value);
+            return !correctAnswers.map(el => this.processString(el)).includes(userInput) ? {answerIncorrect: {value: userInput}} : null;
         }
+    }
+
+    static processString(text: string): string {
+        return text.toLocaleLowerCase().replace(/[.,;:\s]/g, "");
     }
 }
