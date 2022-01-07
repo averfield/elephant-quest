@@ -1,12 +1,12 @@
 <mat-stepper [linear]="true" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-            <p> {{ firstQuestionText }} </p>
+            <div [innerHTML]="firstQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="firstCtrl" required>
             </mat-form-field>
-            <img class="quest-img" src="assets/elephant.png" alt="">
+            <img class="quest-img" src="assets/1.png" alt="">
             <div>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
             </div>
@@ -14,7 +14,7 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup">
-            <p> {{ secondQuestionText }} </p>
+            <div [innerHTML]="secondQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="secondCtrl" required>
@@ -27,12 +27,12 @@
     </mat-step>
     <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
-            <p> {{ thirdQuestionText }} </p>
+            <div [innerHTML]="thirdQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="thirdCtrl" required>
             </mat-form-field>
-            <img class="quest-img" src="assets/elephant.png" alt="">
+            <img class="quest-img" src="assets/3.png" alt="">
             <div>
                 <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
@@ -40,7 +40,7 @@
         </form>
     </mat-step><mat-step [stepControl]="fourthFormGroup">
         <form [formGroup]="fourthFormGroup">
-            <p> {{ fourthQuestionText }} </p>
+            <div [innerHTML]="fourthQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="fourthCtrl" required>
@@ -52,13 +52,13 @@
         </form>
     </mat-step><mat-step [stepControl]="fifthFormGroup">
         <form [formGroup]="fifthFormGroup">
-            <p> {{ fifthQuestionText }} </p>
+            <div [innerHTML]="fifthQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="fifthCtrl" required>
             </mat-form-field>
-            <img class="quest-img" src="assets/elephant.png" alt="">
-            <img class="quest-img" src="assets/elephant.png" alt="">
+            <img class="quest-img" src="assets/5_1.png" alt="">
+            <img class="quest-img" src="assets/5_2.png" alt="">
             <div>
                 <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
@@ -66,12 +66,12 @@
         </form>
     </mat-step><mat-step [stepControl]="sixthFormGroup">
         <form [formGroup]="sixthFormGroup">
-            <p> {{ sixthQuestionText }} </p>
+            <div [innerHTML]="sixthQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="sixthCtrl" required>
             </mat-form-field>
-            <img class="quest-img" src="assets/elephant.png" alt="">
+            <img class="quest-img" src="assets/6.png" alt="">
             <div>
                 <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
@@ -79,13 +79,13 @@
         </form>
     </mat-step><mat-step [stepControl]="seventhFormGroup">
         <form [formGroup]="seventhFormGroup">
-            <p> {{ seventhQuestionText }} </p>
+            <div [innerHTML]="seventhQuestionText"></div>
             <mat-form-field appearance="fill">
                 <mat-label>Відповідь</mat-label>
                 <input matInput formControlName="seventhCtrl" required>
             </mat-form-field>
-            <img class="quest-img" src="assets/elephant.png" alt="">
-            <img class="quest-img" src="assets/elephant.png" alt="">
+            <img class="quest-img" src="assets/7_1.png" alt="">
+            <img class="quest-img" src="assets/7_2.png" alt="">
             <div>
                 <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
                 <button mat-stroked-button matStepperNext class="btn-next-step">Погнали далі!</button>
@@ -93,10 +93,10 @@
         </form>
     </mat-step>
     <mat-step>
-        <p> {{ eightsQuestionText }} </p>
-        <img class="quest-img" src="assets/elephant.png" alt="">
-        <p *ngIf="finalBtnClicked"> {{ finalText }} </p>
-        <img *ngIf="finalBtnClicked" class="quest-img" src="assets/elephant.png" alt="">
+        <div [innerHTML]="eightsQuestionText"></div>
+        <img class="quest-img" src="assets/8.png" alt="">
+        <div *ngIf="finalBtnClicked" [innerHTML]="finalText"></div>
+        <img *ngIf="finalBtnClicked" class="quest-img" src="assets/final.png" alt="">
         <div>
             <button mat-stroked-button matStepperPrevious class="btn-previous-step">Назад</button>
             <button mat-stroked-button class="btn-next-step" (click)="finalBtnClicked = true">Я знаю відвовідь (._.)</button>
